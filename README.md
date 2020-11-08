@@ -1,8 +1,8 @@
 # Applying machine learning techniques to omics and imaging data to model complex traits
 ## Project Goal  
-Using multi-omics within TGCA (The Cancer Genome Atlas) dataset to classify patient diagnostic and demographic data and create a machine learning model that can predict patient survivability.
+Using multi-omics within TGCA (The Cancer Genome Atlas) dataset to classify patient omic, diagnostic and demographic data and create a machine learning model that can predict patient survivability.
 
-![alt text](https://github.com/STRIDES-Codes/Applying-machine-learning-techniques-to-omics-and-imaging-data-to-model-complex-traits/blob/main/Workflow.png?raw=true)
+![alt text](https://github.com/STRIDES-Codes/Applying-machine-learning-techniques-to-omics-and-imaging-data-to-model-complex-traits/blob/main/Images/Workflow.png?raw=true)
 
 ## Team Members  
 - **Md Ashad Alam**
@@ -12,3 +12,9 @@ Using multi-omics within TGCA (The Cancer Genome Atlas) dataset to classify pati
 - **Rebecca "Becky" Waugh**
 - **Udana Torian**
 - **Amin Cheikhi**
+
+
+## Dependencies
+Google Cloud Platform(GCP) VM  
+RStudio  
+National Cancer Institute GDC Data Portal (https://portal.gdc.cancer.gov/)  
