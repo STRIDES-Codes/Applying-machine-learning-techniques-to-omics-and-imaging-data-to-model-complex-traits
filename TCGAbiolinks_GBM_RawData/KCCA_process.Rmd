@@ -2,7 +2,9 @@
 title: "KCCA_integration"
 author: "Ray Su"
 date: "11/8/2020"
-output: html_document
+output:
+  md_document:
+    variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
@@ -33,14 +35,30 @@ b.outcome[2]
 
 ## Image to matrix
 
-## Image to matrix
 
 ## Omics data preprocess
 
+### 
+
+1. mRNA_selected.csv: normalized mRNA expression for selected genes and patients
+2. methyl_selected.csv: beta values (extent of methylation) for selected genes and patients
+3. mRNA_PCA.csv and methyl_selected.csv: top 10 PC by PCA. Values are first centered+scaled and then analyzed by PCA.
+4. selected patients: patients with both imaging data (Udana's list) and with mRNA/methylation datasets (freshly downloaded from TCGA)
+5. selected_genes: genes that are biologically important (Amin's list) and with non-NA values for all patients in the mRNA/methylation datasets.
+
+* Based on the this [review](https://go.nature.com/2U5Dicc), we hypothesise that the top  mitochondrial-coding genes may capture the essence of the transcriptomic and methylatio status data, and as such, may constitute a more resolved feature-base.
+* Human mitochondrial protein genes  were  collected from using Web Service Client as described here [link](https://bit.ly/3eDQsqA) or by manual download here [link](https://bit.ly/3laNhc6)
+* The official/final of gene panels for downstream PCA  will applied to the subset of the mRNA and Methylation gene data that belong to the above-mentioned panel.
 
 
+The updated date: 
+*releaseDate: "2016-01-28";
+*cohorts: 'GBM';
 
+```{r}
+mythyl <- read.csv(file = "../omics_preprocessing/methyl_selected.csv")
+mRNA <- read.csv(file = "../omics_preprocessing/mRNA_selected.csv")
+```
 
-# Generate MD file
 
 
