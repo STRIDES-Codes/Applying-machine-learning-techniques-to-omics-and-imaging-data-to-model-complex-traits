@@ -1,0 +1,36 @@
+---
+title: "KCCA_integration"
+author: "Ray Su"
+date: "11/8/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library("tidyverse")
+library("DT")
+```
+
+## Data Source
+
+
+```{r cars}
+Survival_status <- read.csv(file = "TCGAbiolinks_GBM_RawData/clinical_11082020.csv",stringsAsFactors = F)
+colnames(Survival_status) <- c("SubjectID","DaysToDeath","SurvivalStatus")
+datatable(Survival_status)
+```
+
+## Data Summary
+
+* Total Sample size: `r length(unique(Survival_status$case_submitter_id))`.
+* 
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
