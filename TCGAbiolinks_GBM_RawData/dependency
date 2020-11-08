@@ -1,0 +1,21 @@
+Update: 11082020 Ray Su
+
+─ Session info ────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.6.1 (2019-07-05)
+ os       macOS Catalina 10.15.7      
+ system   x86_64, darwin15.6.0        
+ ui       RStudio                     
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       America/Chicago             
+ date     2020-11-08                  
+
+─ Packages ────────────────────────────────────────────────
+ package              * version     date       lib
+RGCCA                * 2.1.2       2017-05-11 [1]
+CCA                  * 1.2.0       2015-02-19 [1]
+rcc                  * 1.0.0       2017-02-28 [1]
+dplyr                * 1.0.2       2020-08-18 [2]
+TCGAbiolinks         * 2.14.1      2020-02-27 [1]

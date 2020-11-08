@@ -3,12 +3,12 @@
 ################################################################################
 #                        Library Section                                       #
 ################################################################################
-  library(e1071)
-  library(class)
-  library(digest)
-  library(RKUM)
-  library(dplyr)
-  library(kernlab)
+library(e1071)
+library(class)
+library(digest)
+library(RKUM)
+library(dplyr)
+library(kernlab)
 
 
 

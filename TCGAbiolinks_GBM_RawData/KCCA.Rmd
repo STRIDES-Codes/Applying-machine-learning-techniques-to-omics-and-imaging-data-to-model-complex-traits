@@ -1,10 +1,8 @@
 ---
-title: "KCCA_integration"
+title: "KCCA"
 author: "Ray Su"
 date: "11/8/2020"
-output:
-  md_document:
-    variant: markdown_github
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +11,6 @@ library("DT")
 ```
 
 ## Data Source
-
 
 ```{r data import}
 Survival_status <- read.csv(file = "clinical_11082020.csv",stringsAsFactors = F)
@@ -34,7 +31,6 @@ b.outcome[2]
 # Method
 
 ## Image to matrix
-
 
 ## Omics data preprocess
 
@@ -58,6 +54,45 @@ The updated date:
 ```{r}
 mythyl <- read.csv(file = "../omics_preprocessing/methyl_selected.csv")
 mRNA <- read.csv(file = "../omics_preprocessing/mRNA_selected.csv")
+# the dimention of mythylation data and mRNA file are the same
+dim(mythyl)
+```
+
+
+```{r}
+library(rcc)
+library(plsdepot)
+library(RGCCA)
+```
+
+
+
+```{r}
+A = list(mRNA, mythyl)
+sapply(A, head)
+A = lapply(A, function(x) scale2(x, bias = TRUE))
+
+# Adjacency matrix
+C = matrix(c(0, 1, 1,0), 2, 2)
+```
+
+```{r}
+library(CCA)
+X=as.matrix(nutrimouse$gene)
+Y=as.matrix(nutrimouse$lipid)
+res.cc=rcc(X,Y,0.1,0.2)
+plt.cc(res.cc)
+```
+
+
+
+
+```{r}
+rgcca_B_factorial = rgcca(A, C, tau = rep(0, 3), scheme = "factorial",scale = T, verbose = TRUE)
+```
+
+```{r}
+rgcca_B_factorial
 ```
 
 
