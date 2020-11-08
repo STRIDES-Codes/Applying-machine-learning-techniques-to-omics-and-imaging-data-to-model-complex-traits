@@ -1,4 +1,4 @@
-# Applying machine learning techniques to omics and imaging data to model complex traits
+# Machine Learning Technique for omics and imaging data: An application in TCGA-GBM
 ## Project Goal  
 Using multi-omics within TGCA (The Cancer Genome Atlas) dataset to classify patient omic, diagnostic and demographic data and create a machine learning model that can predict patient survivability.
 
@@ -14,7 +14,7 @@ Using multi-omics within TGCA (The Cancer Genome Atlas) dataset to classify pati
 - **Amin Cheikhi**
 
 
-## Dependencies
+## Dependencies:computer:
 Google Cloud Platform(GCP) VM  
 RStudio  
-National Cancer Institute GDC Data Portal (https://portal.gdc.cancer.gov/)  
+[National Cancer Institute GDC Data Portal](https://portal.gdc.cancer.gov/)  
