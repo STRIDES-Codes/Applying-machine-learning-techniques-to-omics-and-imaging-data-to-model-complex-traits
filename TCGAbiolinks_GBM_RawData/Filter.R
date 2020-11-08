@@ -4,7 +4,7 @@ library("devtools")
 # library(ISBCGCExamples)
 # 
 # bigrquery::list_tables("isb-cgc", "tcga_201510_alpha")
- BiocManager::install("TCGAbiolinks")
+# BiocManager::install("TCGAbiolinks")
 library("TCGAbiolinks")
 query.met <- GDCquery(project = "TCGA-GBM",
                       data.category = "DNA Methylation",
