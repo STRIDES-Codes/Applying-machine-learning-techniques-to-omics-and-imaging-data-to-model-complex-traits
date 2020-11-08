@@ -1,4 +1,5 @@
 rm(list=ls())
+library("tidyverse")
 library("devtools")
 # install_github("isb-cgc/examples-R", build_vignettes=TRUE)
 # library(ISBCGCExamples)
@@ -9,32 +10,32 @@ library("TCGAbiolinks")
 query.met <- GDCquery(project = "TCGA-GBM",
                       data.category = "DNA Methylation",
                       legacy = FALSE)
-GDCdownload(query.met)
-GBM.met <- GDCprepare(query = query.met,
-                    save = TRUE, 
-                    save.filename = "GBM.met.rda")
+# GDCdownload(query.met)
+# GBM.met <- GDCprepare(query = query.met,
+#                     save = TRUE, 
+#                     save.filename = "GBM.met.rda")
 
 query.exp <- GDCquery(project = "TCGA-GBM",
                       data.category = "Transcriptome Profiling",
                       data.type = "Gene Expression Quantification")
-GDCdownload(query.exp)
-GBM.exp <- GDCprepare(query = query.met,
-                      save = TRUE, 
-                      save.filename = "GBM_exp.rda")
+# GDCdownload(query.exp)
+# GBM.exp <- GDCprepare(query = query.met,
+#                       save = TRUE, 
+#                       save.filename = "GBM_exp.rda")
 query.CNV <- GDCquery(project = "TCGA-GBM",
                       data.category = "Copy Number Variation",
                       data.type = "Copy Number Segment")
-GDCdownload(query.CNV)
-GBM.CNV <- GDCprepare(query = query.met,
-                      save = TRUE, 
-                      save.filename = "GBM_CNV.rda")
+# GDCdownload(query.CNV)
+# GBM.CNV <- GDCprepare(query = query.met,
+#                       save = TRUE, 
+#                       save.filename = "GBM_CNV.rda")
 query.SlideImage <- GDCquery(project = "TCGA-GBM",
                       data.category = "Biospecimen",
                       data.type = "Slide Image")
-GDCdownload(query.SlideImage)
-GBM.SlideImage <- GDCprepare(query = query.SlideImage,
-                      save = TRUE, 
-                      save.filename = "GBM_SlideImage.rda")
+# GDCdownload(query.SlideImage)
+# GBM.SlideImage <- GDCprepare(query = query.SlideImage,
+#                       save = TRUE, 
+#                       save.filename = "GBM_SlideImage.rda")
 
 # Get all patients that have DNA methylation and gene expression.
 common.patients <- intersect(substr(getResults(query.met, cols = "cases"), 1, 12),
