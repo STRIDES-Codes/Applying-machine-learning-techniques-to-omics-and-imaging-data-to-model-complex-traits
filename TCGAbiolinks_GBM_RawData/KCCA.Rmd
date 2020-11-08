@@ -78,13 +78,14 @@ C = matrix(c(0, 1, 1,0), 2, 2)
 
 ```{r}
 library(CCA)
-X=as.matrix(nutrimouse$gene)
-Y=as.matrix(nutrimouse$lipid)
+
+X=as.matrix(mythyl)
+Y=as.matrix(mRNA)
 res.cc=rcc(X,Y,0.1,0.2)
 plt.cc(res.cc)
+
+res.cc
 ```
-
-
 
 
 ```{r}

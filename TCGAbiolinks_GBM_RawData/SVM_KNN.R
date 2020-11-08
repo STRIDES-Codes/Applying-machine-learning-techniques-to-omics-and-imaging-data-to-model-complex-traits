@@ -24,7 +24,7 @@ cv.folds <- function(n, nfolds)
 
 
 
-   ###############################################################################
+###############################################################################
 #       Function for Prediction error  for cross-validation                   #
 ###############################################################################
 SVM2F<-function(X,Y)
@@ -60,15 +60,13 @@ KNN2F<-function(X,Y)
              }
             #return(em2)
             list(Mean=mean(em2), stn = sd(em2))
- }
+}
 
 
+X <- CXCCA # set of selected features
+Y <-  factor(c(rep("1", 11), rep("2", 53)))
 
- X <- CXCCA # set of selected features
- Y <-  factor(c(rep("1", 11), rep("2", 53)))
- 
-
- c1 <- factor(c(rep(1, 22), rep(2, 40)))
+c1 <- factor(c(rep(1, 22), rep(2, 40)))
 
  AllSVM<- SVM2F(CX, c1)
  AllKNN<- KNN2F(CX, c1)
