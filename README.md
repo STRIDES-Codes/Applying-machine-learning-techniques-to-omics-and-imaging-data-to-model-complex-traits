@@ -18,3 +18,8 @@ Clinical designs in biomedical research increasingly require the implementation 
 Google Cloud Platform(GCP) VM  
 [National Cancer Institute GDC Data Portal](https://portal.gdc.cancer.gov/)  
 Rstudio
+RGCCA, * 2.1.2
+CCA, * 1.2.0
+rcc, * 1.0.0
+dplyr, * 1.0.2
+TCGAbiolinks, * 2.14.1
