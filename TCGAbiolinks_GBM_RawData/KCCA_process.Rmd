@@ -13,24 +13,34 @@ library("DT")
 ## Data Source
 
 
-```{r cars}
-Survival_status <- read.csv(file = "TCGAbiolinks_GBM_RawData/clinical_11082020.csv",stringsAsFactors = F)
+```{r data import}
+Survival_status <- read.csv(file = "clinical_11082020.csv",stringsAsFactors = F)
 colnames(Survival_status) <- c("SubjectID","DaysToDeath","SurvivalStatus")
 datatable(Survival_status)
 ```
 
-## Data Summary
-
-* Total Sample size: `r length(unique(Survival_status$case_submitter_id))`.
-* 
-
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r,echo=FALSE,message=F}
+b.outcome <- table(Survival_status$SurvivalStatus)
+b.outcome[2]
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Data Summary
+
+* Total Sample size: `r length(unique(Survival_status$SubjectID))`.
+* `r b.outcome[2]` case samples.
+
+# Method
+
+## Image to matrix
+
+## Image to matrix
+
+## Omics data preprocess
+
+
+
+
+
+# Generate MD file
+
+
